@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class eCommerceController extends Controller
 {
-    public function regis(){
-        return view('regis', ['title' => "Registrasi"]);
+    public function regisBuyer(){
+        return view('regisBuyer', ['title' => "Registrasi", 'welcome' => "Daftar Sebagai Pembeli"]);
+    }
+    public function regisSeller(){
+        return view('regisSeller', ['title' => "Registrasi", 'welcome' => "Daftar Sebagai Penjual"]);
     }
     public function login(){
         return view('login', ['title' => "Login"]);

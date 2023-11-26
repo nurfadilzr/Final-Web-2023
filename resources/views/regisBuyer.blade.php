@@ -3,24 +3,31 @@
 @section('content')
 
 <div class="container" >
-   <h1 style="padding: 20px 0; text-align: center;">Daftar sebagai ...</h1>
+   <h1 style="padding: 20px 0; text-align: center;">{{ $welcome }}</h1>
    <form method="POST">
 
       <div class="form-row mb-4">
-         <div class="col-md-4 mb-3">
+         <div class="col-md-6 mb-3">
             <label for="formEmail">Email</label>
             <input type="email" name="email" class="form-control" id="formEmail" placeholder="example@email.com" required>               
          </div>
-         <div class="col-md-4 mb-3">
-            <label for="formTelephone">No. Telepon</label>
-            <input type="phone" name="telephone" class="form-control" id="formTelephone" pattern="[0-9]{11,13}" required>            
-         </div>
-         <div class="col-md-4 mb-3">
-            <label for="formName">Nama Lengkap</label>
+         <div class="col-md-6 mb-3">
+            <label for="formName">Nama Pengguna</label>
             <input type="text" name="nama" class="form-control" id="formName" required>               
          </div>
       </div>
-               
+      
+      <div class="form-row mb-4">
+         <div class="col-md-6 mb-3">
+            <label for="formTelephone">No. Telepon</label>
+            <input type="phone" name="telephone" class="form-control" id="formTelephone" pattern="[0-9]{11,13}" required>            
+         </div>
+         <div class="col-md-6 mb-3">
+            <label for="formAddress">Alamat Pengiriman</label>
+            <input type="text" name="address" class="form-control" id="formAddress" required>            
+         </div>
+      </div>
+
       <div class="form-row">
          <div class="col-md-4 mb-3">
             <label for="formUsername">Username</label>

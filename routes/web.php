@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/registrasi', [eCommerceController::class, 'regis']);
+Route::get('/regisBuyer', [eCommerceController::class, 'regisBuyer']);
+
+Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
 
 Route::get('/login', [eCommerceController::class, 'login']);

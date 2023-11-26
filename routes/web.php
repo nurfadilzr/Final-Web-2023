@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\eCommerceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/registrasi', function() {
-    return view('regis');
-});
+Route::get('/registrasi', [eCommerceController::class, 'regis']);
 
-Route::get('/login', function() {
-    return view('login');
-});
+Route::get('/login', [eCommerceController::class, 'login']);

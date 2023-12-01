@@ -2,4 +2,7 @@
 
 @section('content')
 
+@extends('partials/navbar')
+
+
 @endsection

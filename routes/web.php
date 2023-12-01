@@ -23,3 +23,5 @@ Route::get('/regisBuyer', [eCommerceController::class, 'regisBuyer']);
 Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
 
 Route::get('/login', [eCommerceController::class, 'login']);
+
+Route::get('/home', [eCommerceController::class, 'home']);

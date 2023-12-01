@@ -15,4 +15,7 @@ class eCommerceController extends Controller
     public function login(){
         return view('login', ['title' => "Login"]);
     }
+    public function home(){
+        return view('homep', ['title' => "Home"]);
+    }
 }

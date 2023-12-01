@@ -1,24 +1,21 @@
 <style>
-   nav {
+   .navbar {
       background-color: #fff;
-      
    }
+
    .navbar-brand {
       font-family: poppins;
       font-weight: 800;
       font-size: 40px;
       font-style: italic;
-      color: #019267;
-      
+      color: #019267;      
    }
    
    .nav-link, form {
       font-family: poppins;
       font-weight: 400;
-      font-size: 16px;
-     
-      color: #019267;
-      
+      font-size: 16px;     
+      color: #019267;      
    }
 
    .logo {
@@ -53,9 +50,7 @@
             <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
          </form>
-         <div class="icon ml-auto">
-            {{-- <a href="#" class="logo mr-3"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a> --}}
-          
+         <div class="icon ml-auto">            
             <a href="#" class="logo mr-3"><i class="fa-solid fa-heart fa-lg"></i></a>
             <a href="#" class="logo mr-3"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
             <a href="#" class="logo mr-3"><i class="fa-solid fa-user fa-lg"></i></a>

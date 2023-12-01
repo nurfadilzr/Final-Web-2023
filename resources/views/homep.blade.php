@@ -11,20 +11,41 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        color: #393939;
+        
     }
 
+    h5 {
+        font-family: poppins;
+        font-weight: 700;
+        font-size: 28px;
+        margin-top: 50px;
+        white-space: nowrap;
+    }
+    p {
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 20px;
+    }
     .btn-our {
         background-color: #019267;
         color: #fff;
-        text-align: center;
-        text-decoration: none;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 20px 0;
-        padding: 5px;
+        padding: 10px 0;
+        font-family: poppins;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+        text-decoration: none;
         border-radius: 10px;
     } 
+    .btn-our:hover {
+        color: #d1d1d1;
+        text-decoration-color: none;
+    }
     
     .carousel-inner {
         margin-top: 50px;
@@ -36,10 +57,10 @@
 <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/carousel.jpg" class="d-block w-100" alt="carousel" style="width: 50%">
+        <img src="img/carousel.jpg" class="d-block w-100" alt="carousel">
         <div class="carousel-caption d-none d-md-block text-center">
             <h5>Fresh and Organic Products For You</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut commodi consequuntur nostrum nisi labore aliquid.</p>
         </div>
     </div>
 </div>
@@ -47,7 +68,7 @@
 <div class="container">
     <section class="products">
         
-        <a type="button" href="" class="d-grid btn-our" data-bs-toggle="button">Our Products</a>
+        <a type="button" href="" class="d-grid link-offset-2 link-underline-opacity-25 link-underline-opacity-25-hover btn-our" data-bs-toggle="button">Our Products</a>
 
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
@@ -89,7 +110,7 @@
         </div>
 
         <div class="d-md-flex justify-content-md-end">
-            <a href="" class="btn btn-outline-dark" style="margin: 20px 0;">See more...</a>
+            <a href="" class="btn btn-outline-dark" >See more...</a>
         </div>
     </section>
 

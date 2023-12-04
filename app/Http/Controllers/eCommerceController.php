@@ -18,4 +18,8 @@ class eCommerceController extends Controller
     public function home(){
         return view('homep', ['title' => "Home"]);
     }
+    public function product(){
+        return view('product');
+    }
+
 }

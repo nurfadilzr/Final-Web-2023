@@ -25,8 +25,10 @@ Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
 
 Route::get('/login', [eCommerceController::class, 'login']);
 
-Route::get('/home', [eCommerceController::class, 'home']);
+// Route::get('/beranda', [eCommerceController::class, 'home']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/product', [eCommerceController::class, 'product']);

@@ -55,7 +55,7 @@
    </form>
 
    {{-- <button class="btn btn-primary" style="margin-top: 10px; text-align: center;" type="submit">Daftar</button> --}}
-   <a href="" class="btn btn-primary" style="margin-top: 10px;">Daftar</a>   
+   <a href="/home" class="btn btn-primary" style="margin-top: 10px;">Daftar</a>   
    <p style="margin-top: 5px">Sudah punya akun?
       {{-- <span><a href="<?= BASE_URL . "login.php" ?>" class=""> Masuk disini</a></span> --}}
    </p>

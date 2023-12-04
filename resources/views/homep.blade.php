@@ -15,7 +15,7 @@
       
    }
 
-   h5 {
+   .fresh-product {
       font-family: poppins;
       font-weight: 700;
       font-size: 28px;
@@ -48,7 +48,7 @@
       border-radius: 10px;
    } 
    .btn-our:hover {
-      color: #d1d1d1;
+      color: #fff;
       text-decoration-color: none;
    }
     
@@ -63,7 +63,7 @@
       <div class="carousel-item active">
         <img src="img/carousel.jpg" class="d-block w-100" alt="carousel">
         <div class="carousel-caption d-none d-md-block text-center">
-            <h5>Fresh and Organic Products For You</h5>
+            <h5 class="fresh-product">Fresh and Organic Products For You</h5>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut commodi consequuntur nostrum nisi labore aliquid.</p>
         </div>
     </div>
@@ -72,7 +72,7 @@
 <div class="container">
    <section id="features" class="features">
       
-      <a type="button" href="" class="d-grid link-offset-2 link-underline-opacity-25 link-underline-opacity-25-hover btn-our" data-bs-toggle="button">Our Features</a>
+      <p class="btn-our">Our Features</p>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col">
@@ -147,17 +147,13 @@
             </div>
          </div>
       </div>
-      <div class="d-md-flex justify-content-md-end">
-         <a href="" class="btn btn-outline-dark" >See more...</a>
-      </div>
-   </section>
 
    <section id="categories" class="categories">
       <a type="button" href="" class="d-grid btn-our" data-bs-toggle="button">Our Categories</a>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col">
-            <div class="card h-100">
+            <div class="card h-80">
                <img src="img/vegies.jpg" class="card-img-top" alt="vegies">
                <div class="card-body">
                <h5 class="card-title">Vegetables</h5>
@@ -166,7 +162,7 @@
             </div>
          </div>
          <div class="col">
-            <div class="card h-100">
+            <div class="card h-80">
                <img src="img/meat.jpg" class="card-img-top" alt="meat">
                <div class="card-body">
                <h5 class="card-title">Meat</h5>
@@ -175,7 +171,7 @@
             </div>
          </div>
          <div class="col">
-            <div class="card h-100">
+            <div class="card h-80">
                <img src="img/spices.jpg" class="card-img-top" alt="spices">
                <div class="card-body">
                <h5 class="card-title">Spices</h5>

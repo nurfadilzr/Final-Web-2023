@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\eCommerceController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\eCommerceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,7 @@ Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
 Route::get('/login', [eCommerceController::class, 'login']);
 
 Route::get('/home', [eCommerceController::class, 'home']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

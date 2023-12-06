@@ -1,5 +1,5 @@
 @extends('layouts/main')
-@extends('partials/navbar')
+@include('partials/navbar')
 
 <style>
    .btn-our {
@@ -46,15 +46,13 @@
           <div class="card-body">
             <h5 class="card-title">{{ $product->nama }}</h5>
             <p class="card-text">{{ $product->deskripsi }}</p>
-            <p class="card-text">{{ $product->harga }}</p>
-            <p class="card-text">{{ $product->stok }}</p>
+            <p class="card-text">Harga: Rp{{ $product->harga }}</p>
+            <p class="card-text">Stok: {{ $product->stok }}</p>
           </div>
         </div>
       @endforeach
    </div>
-
-
-   
+ 
 </div>
 
 @endsection

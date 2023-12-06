@@ -26,6 +26,14 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-form-label text-md-end">Address</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
+                            </div>                        
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
@@ -38,7 +46,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
@@ -58,6 +66,19 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="role" class="col-md-4 col-form-label text-md-end">Role</label>
+
+                            <div class="col-md-6">
+                                <select id="role" class="form-select" aria-label="Default select example">
+                                    <option selected>Pilih Pengguna...</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="seller">Seller</option>
+                                    <option value="buyer">Buyer</option>
+                                </select>                                
                             </div>
                         </div>
 

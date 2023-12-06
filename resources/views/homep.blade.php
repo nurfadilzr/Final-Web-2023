@@ -102,7 +102,7 @@
          </ul>
 
          
-         <form class="d-flex mb-auto ml-2" role="search">
+         <form class="d-flex mb-auto ml-2" role="search" action="{{ route('products.search') }}" method="GET">
             <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
          </form>
@@ -132,6 +132,8 @@
    <section id="features" class="features">
       
       <p class="btn-our">Our Features</p>
+
+      <a href="/logout">keluar</a>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col">
@@ -208,7 +210,7 @@
       </div>
 
    <section id="categories" class="categories">
-      <a type="button" href="" class="d-grid btn-our" data-bs-toggle="button">Our Categories</a>
+      <a type="button" href="/productCategory" class="d-grid btn-our" data-bs-toggle="button">Our Categories</a>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col">
@@ -241,6 +243,4 @@
          </div>
    </section>
 </div>
-
-
 @endsection

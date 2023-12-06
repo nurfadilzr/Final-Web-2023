@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\eCommerceController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/product', [eCommerceController::class, 'product']);
 
 Route::get('/product', [ProductController::class, 'index']);
+
+Route::get('/productCategory', [ProductController::class, 'search'])->name('products.search');
+
+Route::get('/products/{nama}', [ProductController::class, 'showProduct'])->name('products.show');
+
+
+Route::group(['middleware' => 'admin'], function () {
+    // Rute-rute yang hanya dapat diakses oleh admin
+});
+
+Route::group(['middleware' => 'seller'], function () {
+    // Rute-rute yang hanya dapat diakses oleh seller
+});
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

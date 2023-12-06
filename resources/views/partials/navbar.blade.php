@@ -40,9 +40,9 @@
             <li class="nav-item">
                <a class="nav-link" href="#product">Products</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                <a class="nav-link" href="#categories">Categories</a>
-            </li>         
+            </li>          --}}
          </ul>
 
          

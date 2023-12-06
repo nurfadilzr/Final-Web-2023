@@ -65,4 +65,12 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
+
+    protected $routeMiddleware = [
+        // Middleware untuk peran admin
+        'admin' => \App\Http\Middleware\AdminMiddleware::class,
+    
+        // Middleware untuk peran seller
+        'seller' => \App\Http\Middleware\SellerMiddleware::class,
+    ];
 }

@@ -19,7 +19,7 @@ class eCommerceController extends Controller
         return view('homep', ['title' => "Home"]);
     }
     public function product(){
-        return view('product');
+        return view('product', ['title' => "Products"]);
     }
 
 }

@@ -166,7 +166,7 @@
 
    <section id="product" class="product">
       
-      <a type="button" href={{ url('/product') }} class="d-grid link-offset-2 link-underline-opacity-25 link-underline-opacity-25-hover btn-our" data-bs-toggle="button">Our Products</a>
+      <a type="button" href="/product" class="d-grid link-offset-2 link-underline-opacity-25 link-underline-opacity-25-hover btn-our">Our Products</a>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col">

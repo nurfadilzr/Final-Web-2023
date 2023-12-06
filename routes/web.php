@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\eCommerceController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/product', [eCommerceController::class, 'product']);
+// Route::get('/product', [eCommerceController::class, 'product']);
+
+Route::get('/product', [ProductController::class, 'index']);

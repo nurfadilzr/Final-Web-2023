@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\eCommerceController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BuyerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,6 @@ Route::group(['middleware' => 'seller'], function () {
 });
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/buyerDashboard', [BuyerController::class, 'index']);
+

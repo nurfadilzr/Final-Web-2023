@@ -109,7 +109,7 @@
          <div class="icon ml-auto">            
             <a href="{{ url('/login') }}" class="logo mr-3"><i class="fa-solid fa-heart fa-lg"></i></a>
             <a href="{{ url('/login') }}" class="logo mr-3"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
-            <a href="{{ url('/login') }}" class="logo mr-3"><i class="fa-solid fa-user fa-lg"></i></a>
+            <a href="{{ url('/buyerDashboard') }}" class="logo mr-3"><i class="fa-solid fa-user fa-lg"></i></a>
          </div>
       </div>
    </div>

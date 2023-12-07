@@ -55,3 +55,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/buyerDashboard', [BuyerController::class, 'index']);
 
+Route::post('/buyerDashboard', 'BuyerController@update')->name('profile.update');
+

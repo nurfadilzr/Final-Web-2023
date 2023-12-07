@@ -32,6 +32,6 @@ class ProductController extends Controller
         // mencari productName yg sama dan ambil hasil pencarian pertama
         $products = Product::where('nama', $productName)->first();
 
-        return view('show', ['product' => $products]);
+        return view('productDetail', ['product' => $products]);
     }
 }

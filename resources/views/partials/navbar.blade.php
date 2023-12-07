@@ -1,6 +1,7 @@
 <style>
    .navbar {
       background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    }
 
    .navbar-brand {
@@ -21,9 +22,12 @@
    .logo {
       color: #019267;
    }
+   .logo:hover, .nav-link:hover, .navbar-brand:hover {
+      color: #e38455;
+   }
 </style>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top shadow-md">
    <div class="container">
       <a class="navbar-brand" href="/home">KitchenMate</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

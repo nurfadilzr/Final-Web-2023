@@ -72,5 +72,7 @@ class Kernel extends HttpKernel
     
         // Middleware untuk peran seller
         'seller' => \App\Http\Middleware\SellerMiddleware::class,
+
+        'buyer' => \App\Http\Middleware\BuyerMiddleware::class,
     ];
 }

@@ -54,6 +54,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role' => ['required', 'string'], // Validasi untuk role
+            'address' => ['required', 'string', 'max:255'], // Validasi untuk alamat
         ]);
     }
 
@@ -65,10 +67,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // Menambahkan nilai default 'buyer' jika role tidak ada
+        // $role = isset($data['role']) ? $data['role'] : 'buyer';
+
+        $role = $data['role']; // Mengambil nilai role dari inputan
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => $role, // Menyimpan data role
+            'address' => $data['address'], // Menyimpan data alamat
         ]);
     }
 }

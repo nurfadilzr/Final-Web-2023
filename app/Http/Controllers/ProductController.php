@@ -15,10 +15,11 @@ class ProductController extends Controller
     public function search(Request $request){
         // Kelas Request untuk mengakses dan memanipulasi data permintaan HTTP yang diterima oleh aplikasi. Dalam hal ini, $request digunakan untuk mengambil input productLine yang dikirimkan oleh pengguna 
         $productCategory = $request->input('kategori');
+        // dd($productCategory);
 
         // mencocokkan productLine dri db dgn productline inputan, jika ada yg cocok taruh di variabel
         $products = Product::where('kategori', $productCategory)->get();
-        // dd($products->all());
+        dd($products->all());
 
         if ($products-> isempty()){
             $pesan="tidak ada data";
@@ -32,6 +33,6 @@ class ProductController extends Controller
         // mencari productName yg sama dan ambil hasil pencarian pertama
         $products = Product::where('nama', $productName)->first();
 
-        return view('productDetail', ['product' => $products]);
+        return view('productDetail', ['product' => $products, 'title' => "Product Detail"]);
     }
 }

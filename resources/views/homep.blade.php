@@ -78,6 +78,13 @@
       margin-top: 50px;
    }
 
+   .logo {
+      color: #019267;
+   }
+   .logo:hover, .nav-link:hover, .navbar-brand:hover {
+      color: #e38455;
+   }
+
 </style>
 
 <nav class="navbar navbar-expand-lg fixed-top">
@@ -95,11 +102,11 @@
                <a class="nav-link" href="#features">Features</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#product">Products</a>
+               <a class="nav-link" href="/product">Products</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                <a class="nav-link" href="#categories">Categories</a>
-            </li>         
+            </li>          --}}
          </ul>
 
          
@@ -176,8 +183,8 @@
             <div class="card h-50">
                <img src="img/carrot.jpg" class="card-img-top" alt="vegies-carrot">
                <div class="card-body">
-               <h5 class="card-title">Carrot</h5>
-               <p class="card-text">This</p>
+               <h5 class="card-title">Wortel</h5>
+               <p class="card-text">Rp5000</p>
                </div>
             </div>
          </div>
@@ -185,8 +192,8 @@
             <div class="card h-50">
                <img src="img/garlic.jpg" class="card-img-top" alt="vegies-garlic">
                <div class="card-body">
-               <h5 class="card-title">Garlic</h5>
-               <p class="card-text">This</p>
+               <h5 class="card-title">Bawang Putih</h5>
+               <p class="card-text">Rp5000</p>
                </div>
             </div>
          </div>
@@ -194,8 +201,8 @@
             <div class="card h-50">
                <img src="img/lettuce.jpg" class="card-img-top" alt="vegies-lettuce">
                <div class="card-body">
-               <h5 class="card-title">Lettuce</h5>
-               <p class="card-text">This</p>
+               <h5 class="card-title">Selada</h5>
+               <p class="card-text">Rp5000</p>
                </div>
             </div>
          </div>
@@ -203,8 +210,8 @@
             <div class="card h-50">
                <img src="img/tomato.jpg" class="card-img-top" alt="vegies-tomato">
                <div class="card-body">
-               <h5 class="card-title">Tomato</h5>
-               <p class="card-text">This</p>
+               <h5 class="card-title">Tomat</h5>
+               <p class="card-text">Rp5000</p>
                </div>
             </div>
          </div>

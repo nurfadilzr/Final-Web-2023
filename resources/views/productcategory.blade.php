@@ -2,9 +2,11 @@
 @include('partials/navbar')
 
 @section('content')
-<ul>
+
+<div class="container">
     @foreach ($product as $products)
-    <li>{{ $product->name }}</li>
+    <h5>{{ $products->nama }}</h5>
     @endforeach
-</ul>
+</div>
+
 @endsection

@@ -39,10 +39,10 @@
                <a class="nav-link" href="/home">Home</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#features">Features</a>
+               <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#product">Products</a>
+               <a class="nav-link" href="/product">Products</a>
             </li>
             {{-- <li class="nav-item">
                <a class="nav-link" href="#categories">Categories</a>

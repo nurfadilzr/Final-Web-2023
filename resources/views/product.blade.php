@@ -41,14 +41,14 @@
 
    <div style="display: flex; flex-wrap: wrap; justify-content: center">
       @foreach($products as $product)
-        <div class="card" style="width: 250px; margin: 5px 5px; ">
-          <img src="" class="card-img-top" alt="{{ $product->nama }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ $product->nama }}</h5>
-            <p class="card-text">{{ $product->deskripsi }}</p>
-            <p class="card-text">Harga: Rp{{ $product->harga }}</p>
-            <p class="card-text">Stok: {{ $product->stok }}</p>
-          </div>
+         <div class="card" style="width: 250px; margin: 5px 5px; ">
+            <img src="" class="card-img-top" alt="{{ $product->nama }}">
+            <div class="card-body">
+               <a class="card-title" href="{{ route('products.show', $product->nama) }}">{{ $product->nama }}</a>
+               {{-- <p class="card-text">{{ $product->deskripsi }}</p> --}}
+               <p class="card-text">Harga: Rp{{ $product->harga }}</p>
+               {{-- <p class="card-text">Stok: {{ $product->stok }}</p> --}}
+            </div>
         </div>
       @endforeach
    </div>

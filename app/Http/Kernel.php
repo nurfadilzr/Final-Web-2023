@@ -74,5 +74,7 @@ class Kernel extends HttpKernel
         'seller' => \App\Http\Middleware\SellerMiddleware::class,
 
         'buyer' => \App\Http\Middleware\BuyerMiddleware::class,
+
+        'public' => \App\Http\Middleware\PublicMiddleware::class,
     ];
 }

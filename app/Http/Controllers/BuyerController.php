@@ -3,21 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buyer;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class BuyerController extends Controller
 {
-    public function index()
+    // public function index()
+    // {
+    //     return view('homep', ['title' => "Home"]);
+    // }
+
+    public function profile()
     {
-        $buyer = Buyer::all(); // Mengambil semua data pembeli dari tabel
+        $buyer = User::all(); // Mengambil semua data pembeli dari tabel
 
         return view('buyerDash', ['buyer' => $buyer, 'title' => "Buyer Dashboard"]);
     }
 
     public function update(Request $request)
     {
-        $buyer = Buyer::find(Auth::id()); // Mengambil data pengguna yang sedang login
+        $buyer = User::find(Auth::id()); // Mengambil data pengguna yang sedang login
 
         $buyer->name = $request->input('name');
         $buyer->address = $request->input('address');

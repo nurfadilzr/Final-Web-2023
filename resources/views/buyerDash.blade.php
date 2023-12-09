@@ -56,7 +56,7 @@
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
          </div>
          </div>
-         <button type="submit" class="btn btn-success">Ubah</button>
+         <button type="submit" class="btn btn-success btn-sm">Ubah</button>
       </div>
 
       @endforeach

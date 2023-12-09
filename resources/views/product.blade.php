@@ -16,7 +16,23 @@
    text-align: center;
    text-decoration: none;
    border-radius: 10px;
-}
+   }
+
+   .card-title {
+      font-family: poppins;
+      font-weight: 500;
+      font-size: 18px;
+      color: black;
+   }.card-title:hover {
+      color: #019267;
+   }
+
+   .card-text {
+      font-family: poppins;
+      font-weight: 400;
+      font-size: 14px;
+   }
+
 </style>
 
 @section('content')

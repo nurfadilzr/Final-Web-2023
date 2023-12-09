@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\eCommerceController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\BuyerController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\eCommerceController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,19 +23,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/regisBuyer', [eCommerceController::class, 'regisBuyer']);
+// Route::get('/regisBuyer', [eCommerceController::class, 'regisBuyer']);
 
-Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
+// Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
 
-Route::get('/login', [eCommerceController::class, 'login']);
+// Route::get('/login', [eCommerceController::class, 'login']);
 
 // Route::get('/beranda', [eCommerceController::class, 'home']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard-admin', 'AdminController@dashboard')->middleware('admin');
+Route::get('/home-buyer', 'BuyerController@index')->middleware('buyer');
+Route::get('/home-seller', 'SellerController@profile')->middleware('seller');
+Route::get('/home-public', 'eCommerceController@home')->middleware('public');
 
-// Route::get('/product', [eCommerceController::class, 'product']);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/product', [ProductController::class, 'index']);
 
@@ -53,7 +58,10 @@ Route::group(['middleware' => 'seller'], function () {
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/buyerDashboard', [BuyerController::class, 'index']);
+Route::get('/buyerDashboard', [BuyerController::class, 'profile']);
 
 Route::post('/buyerDashboard', 'BuyerController@update')->name('profile.update');
+
+Route::post('/uploadProduct', 'SellerController@store')->name('seller.create');
+
 

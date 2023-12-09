@@ -50,8 +50,8 @@
          </ul>
 
          
-         <form class="d-flex mb-auto ml-2" role="search">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+         <form class="d-flex mb-auto ml-2" role="search" action="{{ route('products.search') }}" method="GET">
+            <input class="form-control mr-2" type="search" placeholder="Search" name="kategori">
             <button class="btn btn-outline-success" type="submit">Search</button>
          </form>
          <div class="icon ml-auto">            

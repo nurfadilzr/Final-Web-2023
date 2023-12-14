@@ -9,7 +9,7 @@ class Buyer extends Model
 {
     use HasFactory;
 
-    protected $table = 'users';
-    protected $fillable = ['name', 'address', 'email', 'password'];
+    protected $table = 'data_buyer';
+    protected $fillable = ['nama', 'email', 'alamat_pengiriman', 'password'];
 
 }

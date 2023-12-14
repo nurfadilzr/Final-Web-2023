@@ -44,6 +44,9 @@
 <div class="container detail">
    <table>
       <tr>
+         <td><img src="{{ asset('storage/'.$product->foto) }}"></td>
+      </tr>
+      <tr>
          <td><h5>{{ $product->nama }}</h5></td>
       </tr>
       <tr>

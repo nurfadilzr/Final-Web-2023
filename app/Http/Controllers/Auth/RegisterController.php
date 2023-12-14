@@ -70,13 +70,13 @@ class RegisterController extends Controller
         // Menambahkan nilai default 'buyer' jika role tidak ada
         // $role = isset($data['role']) ? $data['role'] : 'buyer';
 
-        $role = $data['role']; // Mengambil nilai role dari inputan
+        // $role = $data['role']; // Mengambil nilai role dari inputan
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'role' => $role, // Menyimpan data role
+            // 'role' => $role, // Menyimpan data role
             'address' => $data['address'], // Menyimpan data alamat
         ]);
     }

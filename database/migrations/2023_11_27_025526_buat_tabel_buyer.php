@@ -14,11 +14,9 @@ return new class extends Migration
         Schema::create('data_buyer', function (Blueprint $table) {
             $table->id();
             $table->text('email')->unique();
-            $table->string('no_telp', 13)->unique();
+            $table->text('password');
             $table->string('nama');
-            $table->string('alamat');
-            $table->string('username', 10)->unique();
-            $table->string('password', 6);
+            $table->string('alamat_pengiriman');
             $table->timestamps();
         });
     }

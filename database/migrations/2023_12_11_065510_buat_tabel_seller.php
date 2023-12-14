@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('role'); // Menambahkan kolom role
-            $table->string('address'); // Menambahkan kolom address
+        Schema::create('data_seller', function (Blueprint $table) {
+            $table->id();
+            $table->text('email')->unique();
+            $table->text('password');
+            $table->string('nama_toko');
+            $table->string('alamat_toko');
+            $table->timestamps();
         });
     }
 
@@ -22,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };

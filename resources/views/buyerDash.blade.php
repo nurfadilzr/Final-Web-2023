@@ -22,7 +22,7 @@
 
 @section('content')
 <div class="container profile">
-   <h2 class="pro">Profile Management</h2>
+   <h2 class="pro">Profile Management Buyer</h2>
    <form class="" role="search" method="POST" action="{{ route('profile.update') }}">
       @foreach ($buyer as $data)
       <div class="row mb-3">

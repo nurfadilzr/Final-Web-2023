@@ -11,17 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('favorite', function (Blueprint $table) {
+        Schema::create('cart', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('harga');
             $table->integer('jumlah');
-            $table->decimal('harga', 6);
-            $table->integer('id_produk', 11);
-            $table->bigInteger('id_buyer', 20);
+            $table->text('foto');
+            $table->foreignId('id_produk')->constrained('produk')->onDelete('cascade');
+            $table->foreignId('id_buyer')->constrained('data_buyer')->onDelete('cascade');
             $table->timestamps();
-
-            $table->foreign('id_produk')->references('id')->on('produk');
-            $table->foreign('id_buyer')->references('id')->on('users');
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('favorite');
+        //
     }
 };

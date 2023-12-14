@@ -12,3 +12,24 @@ export default defineConfig({
         }),
     ],
 });
+
+const path = require('path');
+
+module.exports = {
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'resources/js/main.js'),
+      },
+    },
+  },
+  server: {
+    proxy: {
+      '/storage': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+    },
+  },
+};
+

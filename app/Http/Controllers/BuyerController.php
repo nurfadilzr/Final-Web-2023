@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class BuyerController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('homep', ['title' => "Home"]);
-    // }
+    public function index()
+    {
+        return view('buyer.homeb', ['title' => "Home"]);
+    }
 
     public function profile()
     {

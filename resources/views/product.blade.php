@@ -58,7 +58,7 @@
    <div style="display: flex; flex-wrap: wrap; justify-content: center">
       @foreach($products as $product)
          <div class="card" style="width: 250px; margin: 5px 5px; ">
-            <img src="" class="card-img-top" alt="{{ $product->nama }}">
+            <img src="/storage/{{ $product->foto }}" class="card-img-top" alt="{{ $product->nama }}">
             <div class="card-body">
                <a class="card-title" href="{{ route('products.show', $product->nama) }}">{{ $product->nama }}</a>
                {{-- <p class="card-text">{{ $product->deskripsi }}</p> --}}
@@ -68,7 +68,6 @@
         </div>
       @endforeach
    </div>
- 
 </div>
 
 @endsection

@@ -19,7 +19,7 @@ class AuthController extends Controller
         ]);
     }
 
-    public function loginSeller(Request $request)
+    public function login(Request $request)
     {
         $validated = $request->validate([
             'email' => ['required', 'string', 'max:255'],
@@ -27,7 +27,7 @@ class AuthController extends Controller
         ]);
 
 
-        // return view('buyer.homeb', ['title' => "Home"] );
-        return redirect('/sellerDashboard');
+        return view('buyer.homeb', ['title' => "Home"] );
+        // return redirect('/sellerDashboard');
     }
 }

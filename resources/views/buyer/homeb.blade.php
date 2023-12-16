@@ -115,8 +115,8 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
          </form>
          <div class="icon ml-auto">            
-            <a href="{{ url('/login') }}" class="logo mr-3"><i class="fa-solid fa-heart fa-lg"></i></a>
-            <a href="{{ url('/login') }}" class="logo mr-3"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+            <a href="" class="logo mr-3"><i class="fa-solid fa-heart fa-lg"></i></a>
+            <a href="" class="logo mr-3"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
             <a href="/buyerDashboard" class="logo mr-3"><i class="fa-solid fa-user fa-lg"></i></a>
          </div>
       </div>
@@ -140,8 +140,6 @@
    <section id="features" class="features">
       
       <p class="btn-our">Our Features</p>
-
-      <a href="/logout">keluar</a>
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
          <div class="col">

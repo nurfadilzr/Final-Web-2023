@@ -28,7 +28,7 @@
 <div class="container profile">
     <h2 class="pro">Profile Management Seller</h2>
     @foreach ($seller as $data)
-    <h1>{{ $data->id  }}</h1>
+    <!-- <h1>{{ $data->id  }}</h1> -->
     <form class="" role="search" method="POST" action="{{ route('profile.updateSeller', $data->id) }}">
         @method('PUT')      <!--  Add this line to specify the method as PUT -->
         @csrf

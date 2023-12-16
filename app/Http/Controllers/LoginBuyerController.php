@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class LoginBuyerController extends Controller
 {
-    public function login(Request $request) 
+    public function login()
+    {
+        return view('login', ['title' => "Login"]);
+    }
+    
+    public function loginBuyer(Request $request) 
     {
         $validated = $request->validate( [
             'email' => ['required', 'string', 'max:255'],

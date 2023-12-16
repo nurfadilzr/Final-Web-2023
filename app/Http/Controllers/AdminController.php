@@ -11,9 +11,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $buyers = Buyer::all();
-        $sellers = Seller::all();
+        $buyer = Buyer::all();
+        $seller = Seller::all();
 
-        return view('admin.userManage', compact('buyers', 'sellers'));
+        return view('admin.userManage', ['title' => "Admin Dashboard", 'buyer' => $buyer, 'seller' => $seller,], compact('buyer', 'seller'));
     }
+
+    
 }

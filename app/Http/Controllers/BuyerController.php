@@ -16,14 +16,14 @@ class BuyerController extends Controller
 
     public function profile()
     {
-        $buyer = User::all(); // Mengambil semua data pembeli dari tabel
+        $buyer = Buyer::all(); // Mengambil semua data pembeli dari tabel
 
         return view('buyerDash', ['buyer' => $buyer, 'title' => "Buyer Dashboard"]);
     }
 
     public function update(Request $request)
     {
-        $buyer = User::find(Auth::id()); // Mengambil data pengguna yang sedang login
+        $buyer = Buyer::find(Auth::id()); // Mengambil data pengguna yang sedang login
 
         $buyer->name = $request->input('name');
         $buyer->address = $request->input('address');

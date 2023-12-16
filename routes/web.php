@@ -34,11 +34,15 @@ Route::post('/regisBuyer', [RegisBuyerController::class, 'create']);
 Route::get('/regisSeller', [eCommerceController::class, 'regisSeller']);
 Route::post('/regisSeller', [RegisSellerController::class, 'create']);
 
+// Route::get('/login-buyer', [LoginBuyerController::class, 'login']);
+// Route::post('/login-buyer', [LoginBuyerController::class, 'loginBuyer']);
+// Route::get('/login-seller', [eCommerceController::class, 'login']);
+// Route::post('/login-seller', [AuthController::class, 'loginSeller']);
 Route::get('/login', [eCommerceController::class, 'login']);
-Route::post('/login-buyer', [LoginBuyerController::class, 'login']);
-Route::post('/login-seller', [AuthController::class, 'loginSeller']);
+Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/home-public', [eCommerceController::class, 'home']);
+
+Route::get('/home-public', [eCommerceController::class, 'home'])->name('home.public');
 Route::get('/home-buyer', [BuyerController::class, 'index']);
 
 // Auth::routes();
@@ -67,7 +71,7 @@ Route::get('/products/{nama}', [ProductController::class, 'showProduct'])->name(
 // });
 
 
-Route::get('/logout', [LoginBuyerController::class, 'logout'])->name('logout');
+// Route::get('/logout', [LoginBuyerController::class, 'logout'])->name('logout');
 
 Route::get('/buyerDashboard', [BuyerController::class, 'profile']);
 Route::post('/buyerDashboard', 'BuyerController@update')->name('profile.updateBuyer');

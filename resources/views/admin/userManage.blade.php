@@ -1,15 +1,24 @@
 @extends('layouts/main')
 @include('partials/navbar')
 
+
 @section('content')
 
-<div class="container profile">
-   <h2 class="pro">User Management</h2>
+<style>
+    .data {
+        margin-top: 80px;
+    }
 
-   <h1>Data Pengguna</h1>
+    tr {
+        column-gap: 20px;
+    }
+</style>
 
-    <h2>Data Buyer</h2>
+<div class="container data">
+    <h2>Data Pengguna</h2>
+
     <table>
+        <h3>Data Buyer</h3>
         <thead>
             <tr>
                 <th>Nama</th>
@@ -19,37 +28,37 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($buyers as $buyer)
-                <tr>
-                    <td>{{ $buyer->nama }}</td>
-                    <td>{{ $buyer->alamat_pengiriman }}</td>
-                    <td>{{ $buyer->email }}</td>
-                    <td>{{ $buyer->password }}</td>
-                </tr>
+            @foreach ($buyer as $buyer)
+            <tr>
+                <td>{{ $buyer->nama }}</td>
+                <td>{{ $buyer->alamat_pengiriman }}</td>
+                <td>{{ $buyer->email }}</td>
+                <td>{{ $buyer->password }}</td>
+            </tr>
             @endforeach
         </tbody>
     </table>
+    <br><br>
 
-    <h2>Data Seller</h2>
     <table>
+        <h3>Data Seller</h3>
         <thead>
             <tr>
                 <th>Nama Toko</th>
                 <th>Alamat Toko</th>
                 <th>Email</th>
                 <th>Password</th>
-                <!-- tambahkan kolom lain yang ingin ditampilkan -->
+
             </tr>
         </thead>
         <tbody>
-            @foreach ($sellers as $seller)
-                <tr>
-                    <td>{{ $seller->nama_toko }}</td>
-                    <td>{{ $seller->alamat_toko }}</td>
-                    <td>{{ $seller->email }}</td>
-                    <td>{{ $seller->password }}</td>
-                    <!-- tambahkan kolom lain yang ingin ditampilkan -->
-                </tr>
+            @foreach ($seller as $seller)
+            <tr>
+                <td>{{ $seller->nama_toko }}</td>
+                <td>{{ $seller->alamat_toko }}</td>
+                <td>{{ $seller->email }}</td>
+                <td>{{ $seller->password }}</td>
+            </tr>
             @endforeach
         </tbody>
     </table>
